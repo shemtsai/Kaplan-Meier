@@ -57,7 +57,8 @@ plot <- ggsurvplot(
   title = "Kaplan-Meier Survival Curve",
   legend.title = "E. faecalis susceptibility",
   legend.labs = as.character(unique(data$Group)),
-  surv.scale = "percent"
+  surv.scale = "percent",
+  palette = c("darkblue", "firebrick", "forestgreen")
 )
 
 # Customizations to plot
