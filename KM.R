@@ -6,9 +6,7 @@ library(survival)
 library(survminer)
 
 file_path <- file.choose()
-
 data <- read_excel(file_path)
-
 head(data)
 
 # Convert to NA to NA -- optional
@@ -33,9 +31,8 @@ data$time_to_event <- ifelse(
 # Death binary assignment
 data$event <- ifelse(is.na(data$`Date of Death`), 0, 1)
 
-# Quick check 
+# Quick check of data
 table(data$event)
-
 
 # Kaplan Meier survival curve by group
 km_fit <- survfit(Surv(time_to_event, event) ~ Group, data = data)
