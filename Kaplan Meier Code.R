@@ -70,29 +70,25 @@ plot$plot <- plot$plot +
     panel.grid.minor = element_blank(),
     axis.line = element_blank(),
     panel.border = element_rect(color = "black", fill = NA, linewidth = 0.5),
-
-    # Text styling for title and labels
     plot.title = element_text(size = 16, face = "bold", hjust = 0.5),
     axis.title = element_text(size = 14, face = "bold"),
-    axis.text = element_text(size = 12),  # Modify both x and y axis text size
-    axis.text.x = element_text(size = 12, angle = 0, hjust = 0.5), # x-axis labels
-    axis.text.y = element_text(size = 12, angle = 0, hjust = 0.5), # y-axis labels
+    axis.text = element_text(size = 12), 
+    axis.text.x = element_text(size = 12, angle = 0, hjust = 0.5),
+    axis.text.y = element_text(size = 12, angle = 0, hjust = 0.5),
     legend.title = element_text(size = 13),
     legend.text = element_text(size = 12)
   )
 
-# Customizations to table
+# Customizations to risk table
 plot$table <- plot$table +
   theme(
     panel.grid.major = element_blank(),
     panel.grid.minor = element_blank(),
     axis.line = element_blank(),
     panel.border = element_rect(color = "black", fill = NA, linewidth = 0.5),
-    
-    # Remove axis titles and labels from the risk table
-    axis.title.x = element_blank(),   # Remove x-axis title from risk table
-    axis.title.y = element_blank(),   # Remove y-axis title from risk table
-    axis.text.x = element_blank(),    # Remove x-axis labels from risk table
+    axis.title.x = element_blank(),  
+    axis.title.y = element_blank(),   
+    axis.text.x = element_blank(),    
   )
 
 print(plot)
